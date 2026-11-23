@@ -160,8 +160,6 @@ nav a:hover{color:var(--accent)}
 .art svg{width:100%;height:100%;fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
 .art text{fill:var(--accent);stroke:none;font-family:var(--font-display)}
 .art img{width:100%;height:100%;object-fit:cover;display:block}
-.card.prio{border:2px solid var(--accent)}
-.card.prio h3{color:var(--accent)}
 
 /* footer */
 footer{background:var(--accent);color:var(--accent-ink);padding-block:36px}
@@ -465,7 +463,7 @@ footer small{font-size:.9rem;opacity:.8}
     var bring = lang === 'hi' ? 'WhatsApp पर भेजें: ' : 'Send on WhatsApp: ';
     $('grid').innerHTML = list.map(function (s) {
       var pic = s.img ? '<img src="' + s.img + '" alt="" loading="lazy">' : '<svg viewBox="0 0 160 100" aria-hidden="true">' + ICON[s.i] + '</svg>';
-      return '<article class="card' + (s.c === 'prio' ? ' prio' : '') + '" id="svc-' + s.id + '"><div class="art">' + pic + '</div><h3>' + t(s.n) +
+      return '<article class="card" id="svc-' + s.id + '"><div class="art">' + pic + '</div><h3>' + t(s.n) +
         '</h3><p class="docs"><b>' + bring + '</b>' + t(s.d) + '</p></article>';
     }).join('');
   }
