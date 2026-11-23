@@ -28,6 +28,7 @@
   --line:#EBD9D7;
   --accent:#B3282D;
   --accent-ink:#FFFFFF;
+  --gold:#E2A33A;
   --plate:#FFFFFF;
   --font-display:'Yatra One',Georgia,'Times New Roman',serif;
   --font-body:'Hind','Noto Sans Devanagari',system-ui,-apple-system,'Segoe UI',sans-serif;
@@ -158,6 +159,12 @@ nav a:hover{color:var(--accent)}
 .art{aspect-ratio:8/5;display:grid;place-items:center;overflow:hidden;border-radius:4px;background:color-mix(in srgb,var(--accent) 7%,var(--bg))}
 .art svg{width:100%;height:100%;fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
 .art text{fill:var(--accent);stroke:none;font-family:var(--font-display)}
+.art .w{fill:#fff}
+.art .r{fill:var(--accent)}
+.art .g{fill:var(--gold)}
+.art .gs{fill:var(--gold);stroke:var(--gold)}
+.art .wh{fill:none;stroke:#fff}
+.art .bg{fill:color-mix(in srgb,var(--gold) 26%,transparent);stroke:none}
 .art img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* footer */
@@ -413,31 +420,31 @@ footer small{font-size:.9rem;opacity:.8}
   ];
 
   /* Sample pictures: simple line drawings. To use a real photo for a service, add img: 'images/name.jpg' to its entry above. */
-  var K = '<rect x="26" y="20" width="108" height="62" rx="7"/>';
-  var P = '<circle cx="52" cy="46" r="9"/><path d="M37 72c4-13 26-13 30 0"/>';
-  var L = '<path d="M80 38h42M80 50h42M80 62h28"/>';
+  var K = '<rect class="w" x="26" y="20" width="108" height="62" rx="7"/><path class="r" d="M26 27a7 7 0 0 1 7-7h94a7 7 0 0 1 7 7v6H26z"/>';
+  var P = '<circle class="g" cx="52" cy="52" r="9"/><path class="g" d="M37 77c4-13 26-13 30 0z"/>';
+  var L = '<path d="M80 48h42M80 60h42M80 72h26"/>';
   var ICON = {
     id: K + P + L,
-    pan: K + P + '<text x="78" y="47" font-size="18" font-weight="700">PAN</text><path d="M80 60h42M80 70h24"/>',
-    voter: K + P + '<path d="M84 52l9 9 19-22"/>',
-    pension: '<circle cx="80" cy="50" r="34"/><circle cx="80" cy="50" r="26"/><text x="80" y="64" font-size="40" text-anchor="middle">₹</text>',
-    lost: '<path d="M34 14h40l16 16v56H34z"/><path d="M74 14v16h16"/><path d="M46 44h30M46 56h22"/><circle cx="108" cy="62" r="17"/><path d="M120 74l16 16"/>',
-    passport: '<rect x="50" y="12" width="60" height="78" rx="5"/><circle cx="80" cy="44" r="15"/><ellipse cx="80" cy="44" rx="6" ry="15"/><path d="M65 44h30M62 72h36"/>',
-    driving: K + '<circle cx="52" cy="48" r="13"/><circle cx="52" cy="48" r="3"/><path d="M39 48h10M55 48h10M52 35v10M52 51v10"/>' + L,
-    ration: '<path d="M38 48h84l-10 38H48z"/><path d="M56 48c0-26 48-26 48 0"/><path d="M62 62h36M65 74h30"/>',
-    police: '<path d="M80 10l36 13v27c0 21-16 34-36 41-20-7-36-20-36-41V23z"/><path d="M80 32l6 12 13 2-10 9 3 13-12-7-12 7 3-13-10-9 13-2z"/>',
-    birth: '<rect x="34" y="14" width="92" height="72" rx="5"/><path d="M48 30h64M48 42h64"/><path d="M80 78c-9-6-15-10-15-16a7.5 7.5 0 0 1 15-2 7.5 7.5 0 0 1 15 2c0 6-6 10-15 16z"/>',
-    cert: '<rect x="34" y="14" width="92" height="66" rx="5"/><path d="M48 30h64M48 42h40"/><circle cx="104" cy="62" r="11"/><path d="M98 71l-4 14 10-5 10 5-4-14"/>',
-    health: '<circle cx="80" cy="50" r="34"/><path d="M80 32v36M62 50h36"/>',
-    worker: '<path d="M44 66c0-22 14-36 36-36s36 14 36 36z"/><path d="M34 66h92v9H34z"/><path d="M80 30v14M63 37l4 10M97 37l-4 10"/>',
-    insurance: '<path d="M30 56a50 38 0 0 1 100 0z"/><path d="M80 56v24a8 8 0 0 1-16 0"/><path d="M80 14v4"/>',
-    job: '<rect x="36" y="34" width="88" height="52" rx="6"/><path d="M62 34V22h36v12M36 58h88"/><path d="M74 58v9h12v-9"/>',
-    school: '<path d="M80 20l50 23-50 23-50-23z"/><path d="M52 56v16c0 10 56 10 56 0V56"/><path d="M130 43v28"/>',
-    gst: '<rect x="42" y="10" width="76" height="80" rx="5"/><text x="80" y="40" font-size="20" font-weight="700" text-anchor="middle">GST</text><path d="M62 78l36-26"/><circle cx="66" cy="60" r="4"/><circle cx="94" cy="72" r="4"/>',
-    factory: '<path d="M26 86V52l26 16V52l26 16V52l26 16V32h26v54z"/><path d="M112 32V18h12v14"/><path d="M40 78h8M66 78h8M92 78h8"/>',
-    ship: '<path d="M24 66h112l-16 20H40z"/><rect x="46" y="46" width="30" height="20"/><rect x="80" y="34" width="32" height="32"/><path d="M60 46V36"/>',
-    finger: '<path d="M50 64a30 30 0 0 1 60 0"/><path d="M60 72V62a20 20 0 0 1 40 0v10"/><path d="M70 80V62a10 10 0 0 1 20 0v18"/><path d="M80 62v24"/>',
-    printer: '<rect x="40" y="40" width="80" height="34" rx="5"/><rect x="54" y="16" width="52" height="24"/><rect x="54" y="58" width="52" height="28"/><path d="M62 68h36M62 77h24"/>'
+    pan: K + P + '<text x="78" y="58" font-size="17" font-weight="700">PAN</text><path d="M80 68h42M80 76h24"/>',
+    voter: K + P + '<path class="gs" d="M84 56l9 9 19-22"/>',
+    pension: '<circle class="g" cx="80" cy="50" r="36"/><circle class="w" cx="80" cy="50" r="27"/><text x="80" y="64" font-size="40" text-anchor="middle">₹</text>',
+    lost: '<path class="w" d="M34 14h40l16 16v56H34z"/><path class="g" d="M74 14v16h16z"/><path d="M46 44h30M46 56h22"/><circle class="w" cx="108" cy="62" r="17"/><path d="M120 74l16 16" stroke-width="6"/>',
+    passport: '<rect class="r" x="50" y="12" width="60" height="78" rx="5"/><circle class="wh" cx="80" cy="44" r="15"/><ellipse class="wh" cx="80" cy="44" rx="6" ry="15"/><path class="wh" d="M65 44h30"/><path class="gs" d="M62 72h36"/>',
+    driving: K + '<circle class="w" cx="52" cy="56" r="13"/><circle class="r" cx="52" cy="56" r="3.5"/><path d="M39 56h9M56 56h9M52 43v9M52 60v9"/>' + L,
+    ration: '<circle class="r" cx="66" cy="44" r="9"/><circle class="w" cx="82" cy="38" r="9"/><circle class="r" cx="98" cy="44" r="9"/><path class="g" d="M38 50h84l-10 36H48z"/><path class="wh" d="M62 62h36M65 74h30"/>',
+    police: '<path class="r" d="M80 10l36 13v27c0 21-16 34-36 41-20-7-36-20-36-41V23z"/><path class="gs" d="M80 32l6 12 13 2-10 9 3 13-12-7-12 7 3-13-10-9 13-2z"/>',
+    birth: '<rect class="w" x="34" y="14" width="92" height="72" rx="5"/><path d="M48 30h64M48 42h64"/><path class="r" d="M80 78c-9-6-15-10-15-16a7.5 7.5 0 0 1 15-2 7.5 7.5 0 0 1 15 2c0 6-6 10-15 16z"/>',
+    cert: '<rect class="w" x="34" y="14" width="92" height="66" rx="5"/><path d="M48 30h64M48 42h40"/><path class="r" d="M98 71l-4 14 10-5 10 5-4-14z"/><circle class="g" cx="104" cy="62" r="11"/>',
+    health: '<circle class="w" cx="80" cy="50" r="38"/><path class="r" d="M72 28h16v14h14v16H88v14H72V58H58V42h14z"/>',
+    worker: '<path class="g" d="M44 66c0-22 14-36 36-36s36 14 36 36z"/><path class="r" d="M34 66h92v9H34z"/><path d="M80 30v14M63 37l4 10M97 37l-4 10"/>',
+    insurance: '<path class="r" d="M30 56a50 38 0 0 1 100 0z"/><path d="M80 56v24a8 8 0 0 1-16 0"/><circle class="g" cx="80" cy="16" r="4"/>',
+    job: '<rect class="g" x="36" y="34" width="88" height="52" rx="6"/><path d="M62 34V22h36v12M36 58h88"/><rect class="w" x="74" y="52" width="12" height="12" rx="2"/>',
+    school: '<path class="w" d="M52 56v16c0 10 56 10 56 0V56L80 66z"/><path class="r" d="M80 20l50 23-50 23-50-23z"/><path d="M130 43v28"/><circle class="g" cx="130" cy="74" r="4.5"/>',
+    gst: '<rect class="w" x="42" y="10" width="76" height="80" rx="5"/><text x="80" y="40" font-size="20" font-weight="700" text-anchor="middle">GST</text><path d="M62 78l36-26"/><circle class="g" cx="66" cy="60" r="6"/><circle class="g" cx="94" cy="72" r="6"/>',
+    factory: '<rect class="r" x="112" y="16" width="12" height="18"/><path class="w" d="M26 86V52l26 16V52l26 16V52l26 16V32h26v54z"/><rect class="g" x="38" y="72" width="10" height="8"/><rect class="g" x="64" y="72" width="10" height="8"/><rect class="g" x="90" y="72" width="10" height="8"/>',
+    ship: '<rect class="g" x="46" y="46" width="30" height="20"/><rect class="w" x="80" y="34" width="32" height="32"/><path class="r" d="M24 66h112l-16 20H40z"/><path d="M60 46V36"/>',
+    finger: '<circle class="w" cx="80" cy="56" r="36"/><path d="M50 64a30 30 0 0 1 60 0"/><path d="M60 72V62a20 20 0 0 1 40 0v10"/><path d="M70 80V62a10 10 0 0 1 20 0v18"/><path d="M80 62v24"/>',
+    printer: '<rect class="w" x="54" y="14" width="52" height="26"/><rect class="r" x="40" y="40" width="80" height="34" rx="5"/><rect class="w" x="54" y="58" width="52" height="28"/><path d="M62 68h36M62 77h24"/><circle class="g" cx="108" cy="50" r="3.5"/>'
   };
 
   var lang = 'hi', filter = 'all';
@@ -461,7 +468,7 @@ footer small{font-size:.9rem;opacity:.8}
     var list = S.filter(function (s) { return filter === 'all' || s.c === filter; });
     var bring = lang === 'hi' ? 'WhatsApp पर भेजें: ' : 'Send on WhatsApp: ';
     $('grid').innerHTML = list.map(function (s) {
-      var pic = s.img ? '<img src="' + s.img + '" alt="" loading="lazy">' : '<svg viewBox="0 0 160 100" aria-hidden="true">' + ICON[s.i] + '</svg>';
+      var pic = s.img ? '<img src="' + s.img + '" alt="" loading="lazy">' : '<svg viewBox="0 0 160 100" aria-hidden="true"><circle class="bg" cx="80" cy="52" r="46"/>' + ICON[s.i] + '</svg>';
       return '<article class="card" id="svc-' + s.id + '"><div class="art">' + pic + '</div><h3>' + t(s.n) +
         '</h3><p class="docs"><b>' + bring + '</b>' + t(s.d) + '</p></article>';
     }).join('');
