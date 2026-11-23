@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rudraoshelp.github.io/rudra-online-solution/sitemap.xml
+Sitemap: https://rudraoshelp.github.io/RUDRA-ONLINE-SOLUTION/sitemap.xml
