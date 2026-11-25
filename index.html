@@ -8,6 +8,7 @@
 <link rel="canonical" href="https://rudraoshelp.github.io/RUDRA-ONLINE-SOLUTION/">
 <meta name="robots" content="index, follow">
 <meta property="og:url" content="https://rudraoshelp.github.io/RUDRA-ONLINE-SOLUTION/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "काम में कितना समय लगता है?", "acceptedAnswer": {"@type": "Answer", "text": "ज़्यादातर सेवाओं का आवेदन उसी दिन हमारे द्वारा कर दिया जाता है, जब आपके दस्तावेज़ पूरे मिल जाएँ। मंज़ूरी या कार्ड/प्रमाणपत्र मिलने का समय संबंधित विभाग पर निर्भर करता है, वह हम आपको बता देते हैं।"}}, {"@type": "Question", "name": "फ़ीस कितनी लगेगी?", "acceptedAnswer": {"@type": "Answer", "text": "फ़ीस सेवा और काम के हिसाब से अलग-अलग होती है। हम आपसे WhatsApp या फ़ोन पर बात करके खुद बताते हैं, और आपके हाँ कहने के बाद ही काम शुरू होता है।"}}, {"@type": "Question", "name": "क्या सच में घर बैठे काम हो जाता है?", "acceptedAnswer": {"@type": "Answer", "text": "हाँ, ज़्यादातर काम दस्तावेज़ WhatsApp पर भेजने से हो जाता है। कुछ सेवाओं में आपकी मौजूदगी चाहिए होती है (जैसे फिंगरप्रिंट या फोटो अपडेट, पासपोर्ट अपॉइंटमेंट, ड्राइविंग टेस्ट)। यह हम पहले ही बता देते हैं।"}}, {"@type": "Question", "name": "काम शुरू करने के लिए क्या करना है?", "acceptedAnswer": {"@type": "Answer", "text": "WhatsApp पर अपना काम और दस्तावेज़ों की फोटो भेजिए, या कॉल बैक का फ़ॉर्म भर दीजिए। हम आपसे संपर्क करके बताएँगे कि क्या-क्या चाहिए और फ़ीस कितनी होगी।"}}, {"@type": "Question", "name": "कौन-से दस्तावेज़ चाहिए, यह कैसे पता करें?", "acceptedAnswer": {"@type": "Answer", "text": "ऊपर 'हमारी सेवाएँ' में हर सेवा के नीचे लिखा है कि WhatsApp पर क्या भेजना है। सूची में कुछ अलग हो या पक्का न हो, तो भेजने से पहले हमसे पूछ लीजिए।"}}, {"@type": "Question", "name": "आवेदन के बाद आगे क्या होता है?", "acceptedAnswer": {"@type": "Answer", "text": "आवेदन जमा होने पर आपको रसीद भेजी जाती है और बताया जाता है कि आगे क्या होगा और कितना समय लगेगा।"}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Rudra Online Solution", "url": "https://rudraoshelp.github.io/RUDRA-ONLINE-SOLUTION/", "telephone": "+918527812278", "description": "घर बैठे सरकारी पेंशन, खोए दस्तावेज़ निकलवाना, आधार, पैन/TAN कार्ड, पासपोर्ट, ड्राइविंग लाइसेंस, राशन कार्ड, GST, MSME/FSSAI और ऑनलाइन फॉर्म की सेवा।", "areaServed": "IN", "availableLanguage": ["hi", "en"], "knowsAbout": ["Government pension", "Lost document duplicates", "Aadhaar", "PAN card", "TAN card", "Passport", "Driving licence", "Ration card", "Police verification", "FIR", "Birth certificate", "Death certificate", "GST registration", "MSME licence", "FSSAI licence", "Import export licence", "Government job forms", "School and college forms"]}</script>
 <meta name="google-site-verification" content="FdpAvmvU8m19zkLak2qWMyr45_T7VlVztq1ARsog420" />
 <meta name="theme-color" content="#B3282D">
@@ -112,6 +113,14 @@ nav a:hover{color:var(--accent)}
 .card.flash{outline:3px solid var(--accent);outline-offset:2px}
 
 /* steps */
+.faqs{max-width:48rem;display:grid;gap:10px}
+.faq{border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+.faq summary{cursor:pointer;list-style:none;padding:16px 48px 16px 18px;font-family:var(--font-display);font-size:1.15rem;line-height:1.35;position:relative;min-height:48px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font:600 1.4rem var(--font-body);color:var(--accent)}
+.faq[open] summary::after{content:"\2212"}
+.faq p{margin:0;padding:0 18px 18px;color:var(--muted)}
+.faq summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:28px;list-style:none;margin:0;padding:0;counter-reset:s}
 .steps li{position:relative;padding-top:56px;min-width:0}
 .steps li::before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-family:var(--font-display);font-size:1.2rem}
@@ -194,6 +203,7 @@ footer small{font-size:.9rem;opacity:.8}
     <nav aria-label="Menu">
       <a href="#services" data-en="Services">सेवाएँ</a>
       <a href="#steps" data-en="How it works">प्रक्रिया</a>
+      <a href="#faq" data-en="Questions">सवाल-जवाब</a>
       <a href="#contact" data-en="Contact">संपर्क</a>
     </nav>
     <button class="lang" id="lang" type="button"></button>
@@ -284,6 +294,40 @@ footer small{font-size:.9rem;opacity:.8}
           <p data-en="Once the application is submitted, we send you the receipt and explain what happens next.">आवेदन जमा होने पर रसीद आपको भेजी जाती है, और आगे क्या होगा यह बताया जाता है।</p>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <section class="plain" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-en="Common questions">अक्सर पूछे जाने वाले सवाल</h2>
+      </div>
+      <div class="faqs">
+        <details class="faq">
+          <summary data-en="How long does the work take?">काम में कितना समय लगता है?</summary>
+          <p data-en="For most services we submit the application the same day, once your documents are complete. Approval and delivery of the card or certificate depend on the department, and we tell you the expected time.">ज़्यादातर सेवाओं का आवेदन उसी दिन हमारे द्वारा कर दिया जाता है, जब आपके दस्तावेज़ पूरे मिल जाएँ। मंज़ूरी या कार्ड/प्रमाणपत्र मिलने का समय संबंधित विभाग पर निर्भर करता है, वह हम आपको बता देते हैं।</p>
+        </details>
+        <details class="faq">
+          <summary data-en="What will the fee be?">फ़ीस कितनी लगेगी?</summary>
+          <p data-en="The fee differs by service and case. We talk to you on WhatsApp or phone and tell you ourselves, and the work starts only after you confirm.">फ़ीस सेवा और काम के हिसाब से अलग-अलग होती है। हम आपसे WhatsApp या फ़ोन पर बात करके खुद बताते हैं, और आपके हाँ कहने के बाद ही काम शुरू होता है।</p>
+        </details>
+        <details class="faq">
+          <summary data-en="Can the work really be done from home?">क्या सच में घर बैठे काम हो जाता है?</summary>
+          <p data-en="Yes, most work is done by sending your documents on WhatsApp. A few services need you to be present (such as fingerprint or photo updates, passport appointment, driving test). We tell you this beforehand.">हाँ, ज़्यादातर काम दस्तावेज़ WhatsApp पर भेजने से हो जाता है। कुछ सेवाओं में आपकी मौजूदगी चाहिए होती है (जैसे फिंगरप्रिंट या फोटो अपडेट, पासपोर्ट अपॉइंटमेंट, ड्राइविंग टेस्ट)। यह हम पहले ही बता देते हैं।</p>
+        </details>
+        <details class="faq">
+          <summary data-en="How do I get started?">काम शुरू करने के लिए क्या करना है?</summary>
+          <p data-en="Send your work and photos of the documents on WhatsApp, or fill in the call-back form. We will contact you and tell you what is needed and what the fee will be.">WhatsApp पर अपना काम और दस्तावेज़ों की फोटो भेजिए, या कॉल बैक का फ़ॉर्म भर दीजिए। हम आपसे संपर्क करके बताएँगे कि क्या-क्या चाहिए और फ़ीस कितनी होगी।</p>
+        </details>
+        <details class="faq">
+          <summary data-en="How do I know which documents are needed?">कौन-से दस्तावेज़ चाहिए, यह कैसे पता करें?</summary>
+          <p data-en="Under each service in &#x27;Our services&#x27; we list what to send on WhatsApp. If your case is different or you are unsure, ask us before sending.">ऊपर 'हमारी सेवाएँ' में हर सेवा के नीचे लिखा है कि WhatsApp पर क्या भेजना है। सूची में कुछ अलग हो या पक्का न हो, तो भेजने से पहले हमसे पूछ लीजिए।</p>
+        </details>
+        <details class="faq">
+          <summary data-en="What happens after the application?">आवेदन के बाद आगे क्या होता है?</summary>
+          <p data-en="Once the application is submitted we send you the receipt and tell you what happens next and how long it may take.">आवेदन जमा होने पर आपको रसीद भेजी जाती है और बताया जाता है कि आगे क्या होगा और कितना समय लगेगा।</p>
+        </details>
+      </div>
     </div>
   </section>
 
